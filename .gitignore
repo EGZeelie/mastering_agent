@@ -1,0 +1,53 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.eggs/
+build/
+dist/
+*.egg
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Test / coverage
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+coverage.xml
+
+# Ruff / mypy caches
+.ruff_cache/
+.mypy_cache/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# OS cruft
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+*.swp
+
+# Environment / secrets -- never commit API keys
+.env
+.env.*
+!.env.example
+
+# Generated audio artifacts (regenerate via make_synthetic_mix.py / run_demo.py)
+output/*.wav
+output/*.json
+synth_mix.wav
+reference_master.wav
+*.wav.bak
+
+# Keep the output directory tracked even though its generated contents are ignored
+!output/.gitkeep

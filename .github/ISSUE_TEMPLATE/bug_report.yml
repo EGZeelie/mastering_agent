@@ -1,0 +1,78 @@
+name: Bug Report
+description: Report a defect in the analysis engine, decision core, DSP chain, or orchestrator loop.
+title: "[Bug]: "
+labels: ["bug", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report a bug. Please be as specific as
+        possible — for audio DSP issues, exact parameters and a way to
+        reproduce (even with the synthetic test audio) are extremely helpful.
+
+  - type: textarea
+    id: description
+    attributes:
+      label: What happened?
+      description: A clear description of the bug and what you expected instead.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: component
+    attributes:
+      label: Which component is affected?
+      options:
+        - Analysis engine (analysis.py)
+        - Decision core (decision.py)
+        - DSP chain (dsp.py)
+        - Orchestrator loop (orchestrator.py)
+        - Hard constraints (crest factor / true peak)
+        - Install / packaging
+        - CI / tests
+        - Other / not sure
+    validations:
+      required: true
+
+  - type: textarea
+    id: repro
+    attributes:
+      label: Steps to reproduce
+      description: Include the exact command(s) run, and whether it reproduces with the synthetic test audio (`make_synthetic_mix.py`) or only with a specific real file.
+      placeholder: |
+        1. python make_synthetic_mix.py
+        2. python -c "..."
+        3. See error / unexpected output below
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant output / traceback
+      render: shell
+
+  - type: input
+    id: python-version
+    attributes:
+      label: Python version
+      placeholder: "3.12.3"
+    validations:
+      required: true
+
+  - type: input
+    id: os
+    attributes:
+      label: Operating system
+      placeholder: "Ubuntu 24.04 / macOS 14 / Windows 11"
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: safety-check
+    attributes:
+      label: Safety-critical check
+      description: If this bug relates to the hard constraints, please confirm.
+      options:
+        - label: This bug could allow the crest-factor floor or true-peak ceiling to be violated (please mark as high priority if so).
+          required: false

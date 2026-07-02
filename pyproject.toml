@@ -1,0 +1,52 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mastering-agent"
+version = "0.1.0"
+description = "Autonomous, closed-loop music mastering agent (analysis engine + LLM/rule-based decision core + headless DSP chain)."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "Proprietary" }
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Operating System :: OS Independent",
+    "Topic :: Multimedia :: Sound/Audio :: Analysis",
+    "Topic :: Multimedia :: Sound/Audio :: Sound Synthesis",
+]
+dependencies = [
+    "numpy>=1.26",
+    "scipy>=1.11",
+    "librosa>=0.10",
+    "soundfile>=0.12",
+    "pyloudnorm>=0.1.1",
+]
+
+[project.urls]
+Repository = "https://github.com/OWNER/mastering-agent"
+Issues = "https://github.com/OWNER/mastering-agent/issues"
+Documentation = "https://github.com/OWNER/mastering-agent/blob/main/README.md"
+
+[project.optional-dependencies]
+gemini = ["google-genai>=0.3.0"]
+dev = ["pytest>=7.0", "ruff>=0.4"]
+
+[tool.setuptools.packages.find]
+include = ["mastering_agent*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"
+
+[tool.ruff]
+line-length = 110
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "W"]
+ignore = ["E501"]  # line length handled loosely; DSP math lines can run long

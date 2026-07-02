@@ -1,0 +1,13 @@
+# Code owners for the mastering agent repository.
+
+# Default owner for everything not matched below
+*                                   @EGZeelie
+
+# Extra scrutiny on anything that can affect the hard safety constraints
+/mastering_agent/decision.py        @EGZeelie
+/mastering_agent/orchestrator.py    @EGZeelie
+/tests/test_decision.py             @EGZeelie
+/tests/test_orchestrator.py         @EGZeelie
+
+# CI / security configuration
+/.github/                           @EGZeelie

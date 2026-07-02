@@ -1,0 +1,47 @@
+name: Feature Request
+description: Suggest an enhancement to the mastering agent's Ears, Brain, Hands, or Loop.
+title: "[Feature]: "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Feature ideas that map to the architecture layers (analysis, decision,
+        DSP, orchestration) are easiest to scope and review.
+
+  - type: dropdown
+    id: layer
+    attributes:
+      label: Which layer does this affect?
+      options:
+        - Ears (analysis / feature extraction / genre profiling)
+        - Brain (decision engines / LLM orchestration)
+        - Hands (DSP chain)
+        - Loop (orchestrator / convergence logic)
+        - Tooling / CI / packaging
+        - Documentation
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem does this solve?
+      description: What's missing or limiting today? Reference README's "Known limitations" section if relevant.
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed solution
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: constraints
+    attributes:
+      label: Compatibility with existing hard constraints
+      options:
+        - label: I understand this must not weaken the crest-factor floor or true-peak ceiling enforced in decision.enforce_hard_constraints().
+          required: true

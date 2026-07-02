@@ -1,0 +1,12 @@
+# Core DSP / analysis stack (required)
+numpy>=1.26
+scipy>=1.11
+librosa>=0.10
+soundfile>=0.12
+pyloudnorm>=0.1.1
+
+# Optional: enables the real Gemini-orchestrated decision engine.
+# Without this installed (or without an API key set), the agent
+# automatically falls back to the deterministic rule-based engine --
+# the pipeline still runs end-to-end either way.
+google-genai>=0.3.0
