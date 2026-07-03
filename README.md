@@ -1,12 +1,9 @@
 # Autonomous Mastering Agent — Prototype
 
-[![CI](https://github.com/OWNER/mastering-agent/actions/workflows/ci.yml/badge.svg)](https://github.com/OWNER/mastering-agent/actions/workflows/ci.yml)
-[![CodeQL](https://github.com/OWNER/mastering-agent/actions/workflows/codeql.yml/badge.svg)](https://github.com/OWNER/mastering-agent/actions/workflows/codeql.yml)
+[![CI](https://github.com/EGZeelie/mastering_agent/actions/workflows/ci.yml/badge.svg)](https://github.com/EGZeelie/mastering_agent/actions/workflows/ci.yml)
+[![CodeQL](https://github.com/EGZeelie/mastering_agent/actions/workflows/codeql.yml/badge.svg)](https://github.com/EGZeelie/mastering_agent/actions/workflows/codeql.yml)
 [![Python 3.9+](https://img.shields.io/badge/python-3.9%2B-blue)](pyproject.toml)
 [![License: Proprietary](https://img.shields.io/badge/license-proprietary-lightgrey)](LICENSE)
-
-> Replace `OWNER` in the badge URLs above with your actual GitHub
-> username/org once pushed — see [GITHUB_SETUP.md](GITHUB_SETUP.md).
 
 A closed-loop, agentic mastering pipeline: **Ears → Brain → Hands**, run
 iteratively until the master converges on target loudness/tone/dynamics —
