@@ -10,7 +10,7 @@ GitHub UI/settings after you push.
 
 ## 1. Repository description & metadata
 
-**Repo name:** `mastering-agent`
+**Repo name:** `mastering_agent`
 
 **Short description** (appears under the repo name, used in search/listing —
 GitHub limits this to ~350 characters):
@@ -173,7 +173,7 @@ git init
 git add .
 git commit -m "Initial commit: autonomous mastering agent prototype"
 git branch -M main
-git remote add origin https://github.com/OWNER/mastering-agent.git
+git remote add origin https://github.com/EGZeelie/mastering_agent.git
 git push -u origin main
 ```
 

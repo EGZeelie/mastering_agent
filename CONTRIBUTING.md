@@ -8,8 +8,8 @@ collaborators.
 ## Development setup
 
 ```bash
-git clone https://github.com/OWNER/mastering-agent.git
-cd mastering-agent
+git clone https://github.com/EGZeelie/mastering_agent.git
+cd mastering_agent
 python3 -m venv .venv && source .venv/bin/activate
 pip install -e ".[dev,gemini]"
 python3 make_synthetic_mix.py
